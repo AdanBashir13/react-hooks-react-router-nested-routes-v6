@@ -6,6 +6,7 @@ function UserProfile() {
   const params = useParams();
   const userId = params.id;
 
+
   useEffect(() =>{
     fetch(`http://localhost:4000/users/${userId}`)
     .then(r => r.json())
@@ -17,7 +18,7 @@ function UserProfile() {
     return <h1>Loading...</h1>;
   };
 
-  return(  
+  return(
       <aside>
         <h1>{user.name}</h1>
       </aside>
